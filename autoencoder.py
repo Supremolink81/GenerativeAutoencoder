@@ -135,6 +135,7 @@ class DenoisifiedAutoEncoder(torch.nn.Module):
             loss_function,
             optimizer : torch.optim.Optimizer,
             training_set,
+            p,
     ) -> None:
         """
         Trains the autoencoder on a set of training data.
@@ -153,7 +154,7 @@ class DenoisifiedAutoEncoder(torch.nn.Module):
                 self.backpropagate(optimizer, loss)
                 
                 # Initialize dataset for Markov chain of training example
-                chain = self.generate_corrupted_training_examples(feature_vector)
+                chain = self.generate_corrupted_training_examples(feature_vector, p)
                 for example in chain:
                     reconstructed_feature_vector = self.forward(example)
                     loss = loss_function(reconstructed_feature_vector, feature_vector)
