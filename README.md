@@ -10,4 +10,4 @@ Generates new training examples through a "walkback" algorithm, allowing the
 model to prevent overfitting without the need for more training samples  
 or more robust noise.
 
-For more detailed information, consult the following paper: https://arxiv.org/abs/1305.6663
+For more detailed information, consult the following paper (not any of the authors): https://arxiv.org/abs/1305.6663
