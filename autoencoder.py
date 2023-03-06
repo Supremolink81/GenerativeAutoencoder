@@ -68,10 +68,10 @@ class DenoisifiedAutoEncoder(torch.nn.Module):
 
     def check_assertions(
         self,
-        encoder_layer_sizes : 'list[int]', 
-        decoder_layer_sizes : 'list[int]', 
-        encoder_activation_functions : list,
-        decoder_activation_functions : list,
+        encoder_layer_sizes: 'list[int]', 
+        decoder_layer_sizes: 'list[int]', 
+        encoder_activation_functions: list,
+        decoder_activation_functions: list,
     ) -> None:
         """
         Checks for the following:
